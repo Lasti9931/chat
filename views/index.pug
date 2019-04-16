@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Chat
+    link(rel='stylesheet', href='/css/bootstrap-grid.min.css')
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    .container
+      h1 Chat
+      .chat
+        each val in dataMessage
+          .message= val
+      .block-message
+        input#message(type="text")
+        input#button(type="submit" value="Add")
+    script(src="https://code.jquery.com/jquery-3.4.0.js")
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/main.js')
